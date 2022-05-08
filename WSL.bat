@@ -6,26 +6,29 @@ ECHO =================================
 
 Pause>nul
 
-ECHO DOCUMENTATION
+ECHO INSTALL
 ECHO ================================= 
 
 
 ECHO 1. Download Ubuntu WSL2 for Windows 10
 ECHO 2. Install Windows Terminal
-ECHO 3. Install Ubuntu WSL2
+ECHO 3. Documentation 
+echo.  
+echo.
+echo.
 Pause>nul
 
 ECHO 1. Download Ubuntu WSL2 for Windows 10 
 ECHO Press ENTER Key:Download Ubuntu WSL2 for Windows 10 
 Pause>nul
-START https://www.microsoft.com/store/productId/9MTTCL66CPXJ
-
-Pause>nul
+Powershell -noprofile -executionpolicy bypass -command wsl --install -d Ubuntu
+pause>nul 
 ECHO 2. Install Windows Terminal 
-START https://www.microsoft.com/store/productId/9N0DX20HK701
+START Powershell -noprofile -executionpolicy bypass -command wsl --install -d Add-AppxPackage Microsoft.WindowsTerminalPreview_1.7.572.0_8wekyb3d8bbwe.msixbundle
 Pause>nul
 ECHO 3. Install Ubuntu WSL2
-ECHO Follow Steps and continue the installation (Use Windows Terminal to execute command line)
+@echo off
+ECHO Documentation (Use Windows Terminal to execute command line)
 Pause>nul
 START https://docs.microsoft.com/en-us/windows/wsl/install#install-wsl-command
 START
