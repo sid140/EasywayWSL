@@ -1,7 +1,8 @@
 
 @ECHO OFF
 
-ECHO Welcome to EasyWSL Helper v1.0
+ECHO Welcome to EasyWSL Helper v1.0 
+ECHO Programmed by Sid 
 ECHO =================================
 
 Pause>nul
