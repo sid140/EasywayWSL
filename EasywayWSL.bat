@@ -30,10 +30,6 @@ pause>nul
 
 Powershell -noprofile -executionpolicy bypass -command wsl -- sudo apt update && sudo apt -y upgrade
 
-Powershell -noprofile -executionpolicy bypass -command wsl-- dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-
-Powershell -noprofile -executionpolicy bypass -command wsl-- dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
 Powershell wsl --set-default-version 2
 echo 
 ECHO Starting Remote Desktop Services 
