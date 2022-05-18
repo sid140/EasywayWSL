@@ -1,0 +1,40 @@
+REM Do not use the computer while the action is in progress 
+REM Just plugin the Pi and watch the WSL install
+REM This payload is created by Sid 
+DELAY 3000
+WINDOWS r
+DELAY 3000
+STRING Powershell -noprofile -executionpolicy bypass -command wsl --install -d Ubuntu
+ENTER 
+DELAY 2000
+GUI X
+ENTER 
+DELAY 2000
+STRING sudo apt install xrdp
+ENTER 
+DELAY 5000
+STRING sudo apt install -y xfce4 
+ENTER 
+DELAY 5000
+STRING sudo apt install -y xfce4-goodies
+ENTER 
+DELAY 5000
+STRING cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak
+ENTER 
+DELAY 5000
+STRING  sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini
+ENTER 
+DELAY 5000
+STRING sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
+ENTER 
+DELAY 5000
+STRING sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
+ENTER 
+DELAY 5000
+STRING sudo /etc/init.d/xrdp start
+ENTER
+EXIT
+
+
+
+
